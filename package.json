@@ -1,0 +1,20 @@
+{
+  "name": "patriksui-monorepo",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "@patriksui-core",
+    "@patriksui-types",
+    "@patriksui-playground"
+  ],
+  "scripts": {
+    "dev": "bun run --filter '*' dev",
+    "build": "bun run --filter @patriksui/types build && bun run --filter @patriksui/core build && bun run --filter playground build",
+    "lint": "biome check .",
+    "format": "biome format --write ."
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.0",
+    "typescript": "^5.6.0"
+  }
+}
