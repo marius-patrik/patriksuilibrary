@@ -1,15 +1,14 @@
-import { defineConfig } from '@rslib/core';
+import { defineConfig } from '@rsbuild/core';
 import { pluginReact } from '@rsbuild/plugin-react';
 
 export default defineConfig({
-  lib: [
-    { format: 'esm', dts: true },
-    { format: 'cjs' },
-  ],
   plugins: [pluginReact()],
+  html: {
+    title: 'PatrikSUI Desktop',
+  },
   source: {
     entry: {
-      index: './src/index.ts',
+      index: './src/index.tsx',
     },
   },
 });

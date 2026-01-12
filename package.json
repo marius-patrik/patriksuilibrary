@@ -3,13 +3,19 @@
   "private": true,
   "type": "module",
   "workspaces": [
+    "@patriksui-shell",
+    "@patriksui-shell-types",
+    "@patriksui-apps",
+    "@patriksui-apps-types",
     "@patriksui-core",
-    "@patriksui-types",
-    "@patriksui-playground"
+    "@patriksui-core-types",
+    "@patriksui-playground",
+    "@patriksui-desktop",
+    "@patriksui-docs"
   ],
   "scripts": {
-    "dev": "bun run --filter '*' dev",
-    "build": "bun run --filter @patriksui/types build && bun run --filter @patriksui/core build && bun run --filter playground build",
+    "dev": "bun run --filter @patriksui/shell-types build && bun run --filter @patriksui/apps-types build && bun run --filter @patriksui/shell build && bun run --filter @patriksui/apps build && (bun run --filter @patriksui/shell dev & sleep 2 && bun run --filter playground dev & bun run --filter @patriksui/desktop dev & bun run --filter @patriksui/docs dev)",
+    "build": "bun run --filter @patriksui/shell-types build && bun run --filter @patriksui/apps-types build && bun run --filter @patriksui/shell build && bun run --filter @patriksui/apps build && bun run --filter playground build && bun run --filter @patriksui/desktop build && bun run --filter @patriksui/docs build",
     "lint": "biome check .",
     "format": "biome format --write ."
   },

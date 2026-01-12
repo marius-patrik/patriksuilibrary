@@ -1,5 +1,7 @@
 # CLAUDE.md
 
+> **Note:** This is the main instruction file for AI assistants. Referenced by `.claude/instructions.md`.
+
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Project Overview
@@ -9,7 +11,7 @@ PatrikSUI is a React component library monorepo built with Bun workspaces. It fo
 ## Commands
 
 ```bash
-# Development (runs all packages in watch mode)
+# Development (builds deps first, then runs all packages in watch mode)
 bun run dev
 
 # Build (order matters: types → core → playground)

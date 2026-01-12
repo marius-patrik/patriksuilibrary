@@ -1,5 +1,5 @@
 {
-  "name": "playground",
+  "name": "@patriksui/docs",
   "version": "0.0.1",
   "private": true,
   "type": "module",
@@ -11,8 +11,6 @@
   "dependencies": {
     "@patriksui/shell": "workspace:*",
     "@patriksui/shell-types": "workspace:*",
-    "@patriksui/apps": "workspace:*",
-    "@patriksui/apps-types": "workspace:*",
     "framer-motion": "^12.25.0",
     "lucide-react": "^0.300.0",
     "react": "^18.3.0",

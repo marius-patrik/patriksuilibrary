@@ -3,7 +3,14 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@patriksui/shell": ["../@patriksui-shell/src/index.ts"],
+      "@patriksui/shell/*": ["../@patriksui-shell/src/*"],
+      "@patriksui/shell-types": ["../@patriksui-shell-types/src/index.ts"],
+      "@patriksui/apps": ["../@patriksui-apps/src/index.ts"],
+      "@patriksui/apps-types": ["../@patriksui-apps-types/src/index.ts"],
+      "@patriksui/shell/styles.css": ["../@patriksui-shell/src/styles/globals.css"]
+
     }
   },
   "include": ["src/**/*"],
